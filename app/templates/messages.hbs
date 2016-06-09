@@ -1,5 +1,15 @@
 <h2>Messages</h2>
 
-{{#link-to "messages.new"}}Add new message{{/link-to}}
+<div class="messages-container">
+  <ul>
+    {{#each model as |msg|}}
+      <li>{{msg.name}}: {{msg.body}}</li>
+    {{/each}}
+  </ul>
+</div>
 
-{{outlet}}
+<form class="new-msg-form" {{ action 'addMessage' on="submit"}}>
+  {{input type="text" placeholder="Name" value=name class="name-input"}}
+  {{input type="text" placeholder="Message" value=body class="msg-input"}}
+  <button type="submit" class="submit">Submit</button>
+</form>

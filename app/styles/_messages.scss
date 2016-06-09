@@ -1,0 +1,14 @@
+.messages-container {
+  border: 1px solid $black-text;
+  height: 300px;
+  padding: 20px;
+  position: relative;
+
+  ul {
+    bottom: 10px;
+    list-style-type: circle;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+  }
+}
